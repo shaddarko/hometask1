@@ -17,21 +17,21 @@ public class Ht1 {
     public void setUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        logger.info("Initializing Chrome Driver");
+        logger.info("Initializing Chrome Driver...");
     }
 
     @Test
     public void checkPage() {
         driver.get ("https://otus.ru");
         assertTrue(driver.getTitle().contains("Онлайн‑курсы для профессионалов, дистанционное обучение современным профессиям"));
-        logger.info("Opening page and checking title");
+        logger.info("Opening page and checking title...");
     }
 
     @AfterTest
     public void tearDown()  {
 
         driver.close();
-        logger.info("Closing driver");
+        logger.info("Closing driver...");
 
     }
 }
